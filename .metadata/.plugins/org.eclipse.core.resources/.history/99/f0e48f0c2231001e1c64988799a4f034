@@ -1,0 +1,17 @@
+package com.example.demo.entity;
+@Entity
+public class Entity {
+	
+	
+	    @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    private Long id;
+
+	    private String column1;
+	    private String column2;
+	    // Add other attributes as per your CSV data
+
+	    // Getters and setters
+
+
+}

@@ -1,0 +1,30 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.entity.Entity;
+
+@RestController
+@RequestMapping("/api")
+public class Controller {
+	@Autowired
+	private final Repository Repository;
+	public Controller(Repository Repository) {
+		this.Repository = Repository;
+	}
+
+	@GetMapping("/data")
+	public List<Entity> getAllData() {
+		return EnityRepository.findAll();
+	}
+
+	// Add more endpoints for CRUD operations as needed
+
+
+
+}

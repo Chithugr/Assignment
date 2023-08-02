@@ -1,0 +1,10 @@
+package com.example.demo.repository;
+
+
+public class Repository extends JpaRepository{
+	@Repository
+	public interface YourEntityRepository extends JpaRepository<En, Long> {
+	    // Add custom query methods if needed
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.example.demo.controller;
+
+
+@RestController
+@RequestMapping("/api")
+public class Controller {
+	private final Repository Repository;
+	public Controller(Repository Repository) {
+		this.Repository = Repository;
+	}
+
+	@GetMapping("/data")
+	public List<Entity> getAllData() {
+		return EntityRepository.findAll();
+	}
+
+	// Add more endpoints for CRUD operations as needed
+
+
+
+}
